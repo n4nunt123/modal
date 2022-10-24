@@ -11,6 +11,24 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      CapitalIndustry.hasMany(models.Accommodation, {
+        foreignKey: 'CapitalIndustryId'
+      })
+      CapitalIndustry.hasMany(models.Asset, {
+        foreignKey: 'CapitalIndustryId'
+      })
+      CapitalIndustry.hasMany(models.Energy, {
+        foreignKey: 'CapitalIndustryId'
+      })
+      CapitalIndustry.hasMany(models.FixCost, {
+        foreignKey: 'CapitalIndustryId'
+      })
+      CapitalIndustry.hasMany(models.Maintenance, {
+        foreignKey: 'CapitalIndustryId'
+      })
+      CapitalIndustry.hasMany(models.RawMaterial, {
+        foreignKey: 'CapitalIndustryId'
+      })
     }
   }
   CapitalIndustry.init({
