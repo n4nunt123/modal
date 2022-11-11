@@ -20,6 +20,7 @@ class AssetController {
       next(err)
     }
   }
+  
   static async insertAsset(req, res, next) {
     try {
       const { name, cost, priority, assetReplacement, CapitalIndustryId } = req.body
@@ -29,6 +30,7 @@ class AssetController {
       next(err)
     }
   }
+
   static async updateAsset(req, res, next) {
     try {
       const { name, cost, assetReplacement, priority } = req.body
@@ -41,6 +43,7 @@ class AssetController {
       next(err)
     }
   }
+
   static async deleteAsset(req, res, next) {
     try {
       const { id } = req.params
